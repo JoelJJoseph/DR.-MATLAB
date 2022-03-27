@@ -22,11 +22,7 @@ function varargout = untitled(varargin)
 
 % Edit the above text to modify the response to help untitled
 
-<<<<<<< HEAD
-% Last Modified by GUIDE v2.5 27-Mar-2022 13:42:45
-=======
-% Last Modified by GUIDE v2.5 27-March-2022 13:42:45
->>>>>>> a109dcc1fcb4a1c1bbf4ad2d820dc3daae5f4b2b
+% Last Modified by GUIDE v2.5 27-Apr-2022 13:42:45
 
 % Begin initialization code - DO NOT EDIT
 
@@ -75,4 +71,71 @@ function varargout = untitled_OutputFcn(hObject, eventdata, handles)
 
 % Get default command line output from handles structure
 varargout{1} = handles.output;
+
+% --- Executes on button press in pushbutton1.
+function pushbutton1_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+handles.img2=uigetfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';...
+          '*.*','All Files' },'G:\dipproject')
+     
+      img=handles.img2;
+      
+      axes(handles.axes1)   
+      
+      imshow(img);
+
+guidata(hObject, handles);
+
+
+% --- Executes on button press in pushbutton3.
+function pushbutton3_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+img=handles.img2;
+img=imread(img)  
+bw=im2bw(img,0.7);
+label=bwlabel(bw);
+stats=regionprops(label,'Solidity','Area');
+density=[stats.Solidity];
+area=[stats.Area];
+high_dense_area=density>0.5;
+max_area=max(area(high_dense_area));
+tumor_label=find(area==max_area);
+tumor=ismember(label,tumor_label);
+se=strel('square',5);
+tumor=imdilate(tumor,se);
+axes(handles.axes2)
+      
+      imshow(tumor,[]);
+
+guidata(hObject, handles);
+
+
+% --- Executes on button press in pushbutton4.
+function pushbutton4_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+img=handles.img2;
+img=imread(img)     
+
+contents=get(hObject,'value')
+bw=im2bw(img,0.7);
+label=bwlabel(bw);
+stats=regionprops(label,'Solidity','Area');
+density=[stats.Solidity];
+area=[stats.Area];
+high_dense_area=density>0.5;
+max_area=max(area(high_dense_area));
+tumor_label=find(area==max_area);
+tumor=ismember(label,tumor_label);
+se=strel('square',5);
+tumor=imdilate(tumor,se);
+[B,L]=bwboundaries(tumor,'noholes');
+
+
+
 
