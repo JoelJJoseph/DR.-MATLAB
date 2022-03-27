@@ -22,7 +22,11 @@ function varargout = untitled(varargin)
 
 % Edit the above text to modify the response to help untitled
 
+<<<<<<< HEAD
 % Last Modified by GUIDE v2.5 27-Mar-2022 13:42:45
+=======
+% Last Modified by GUIDE v2.5 27-March-2022 13:42:45
+>>>>>>> a109dcc1fcb4a1c1bbf4ad2d820dc3daae5f4b2b
 
 % Begin initialization code - DO NOT EDIT
 
