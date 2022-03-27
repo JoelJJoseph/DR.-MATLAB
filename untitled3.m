@@ -32,3 +32,7 @@ for i=1:length(B)
     
     
 end
+
+
+title('Detected Tumor');
+hold off;
