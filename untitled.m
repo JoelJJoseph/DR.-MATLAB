@@ -139,3 +139,24 @@ tumor=imdilate(tumor,se);
 
 
 
+axes(handles.axes3)
+imshow(img,[]);
+hold on
+for i=1:length(B)
+    plot(B{i}(:,2),B{i}(:,1), 'y' ,'linewidth',1.45);
+end
+guidata(hObject, handles);
+
+
+% --- Executes on button press in pushbutton5.
+function pushbutton5_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton5 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+clc
+clear all;
+close all;
+
+
+
+
