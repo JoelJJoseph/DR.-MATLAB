@@ -2,24 +2,24 @@
 
 ## Inspiration
 "A correct diagnosis is three-fourths the remedy." - Mahatma Gandhi
-When cells proliferate out of control, cancer develops. According to global statistics, breast cancer (BC) is one of the most frequent malignancies among women globally, accounting for the majority of new cancer cases and cancer-related deaths, making it a major public health issue in today's society. Another type of cancer is a brain tumor. And we are in the midst of COVID-19, when people are unable to access hospitals due to overcrowding, not to mention the dread of contracting the sickness.
+When cells proliferate out of control, cancer develops. According to global statistics, breast cancer (BC) is one of the most frequent malignancies among women globally, accounting for the majority of new cancer cases and cancer-related deaths, making it a major public health issue in today's society. Another type of cancer is a brain tumor. And we are in the midst of COVID-19, when people are unable to access hospitals due to overcrowding, not to mention the dread of contracting the sickness. 
+We also know that mostly Python is used for Machine learning and image processing, but we wanted to change that and wanted to use MATLAB for our project.
 ## Work Plan
 ![image](https://user-images.githubusercontent.com/72274851/160289552-298d34fc-0751-4a83-9b0b-8574385ffc78.png)
 
 ## What it does
 
-✅Dr.Matlab Predicts the type of cancer and suggests treatment options. It serves as a one-stop solution for women to find their results without having to wait in long lines, and it also highlights the impacted areas utilizing algorithms such as ADF (Adaptive median filter), Gmm segmentation, and classification.
+
+✅ Dr.Matlab Predicts the type of cancer and suggests treatment options. It serves as a one-stop solution for women to find their results without having to wait in long lines, and it also highlights the impacted areas utilizing algorithms such as ADF (Adaptive median filter), Gmm segmentation, and classification.  
+
 ![image](https://user-images.githubusercontent.com/72274851/160289627-95f2136c-cc98-4c7b-a0b3-2393c368f3f9.png)
 ![image](https://user-images.githubusercontent.com/72274851/160289632-1ec47ed8-1fb6-4dd7-a5a9-1771dd017538.png)
 
-
-
-✅Dr.Matlab uses image segmentation to extend its capabilities to brain tumors.
-There are two features to this.
+✅ Dr.Matlab uses image segmentation to extend its capabilities to brain tumors.
+There are two features to this.  
 Detect the tumor as well as encircle it.
+
 ![image](https://user-images.githubusercontent.com/72274851/160289578-a88b85f1-3b73-4c7f-9621-dfc583f9d349.png)
-
-
 
 Both these application contains a user friendly Gui for the users.
 
