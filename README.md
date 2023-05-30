@@ -1,4 +1,4 @@
-## GIRLHACKS
+## Dr. Matlab
 
 ## Inspiration
 "A correct diagnosis is three-fourths the remedy." - Mahatma Gandhi
